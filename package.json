@@ -1,8 +1,8 @@
 {
   "name": "@pandonut/duck-ui",
-  "description": "Easy UI creation for React JS (W.I.P)",
-  "desc": "Easy UI creation for React JS (W.I.P)",
-  "version": "0.2.1",
+  "description": "Easy UI creation for React JS",
+  "desc": "Easy UI creation for React JS",
+  "version": "0.3.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
