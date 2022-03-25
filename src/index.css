@@ -20,6 +20,7 @@ code {
   --_dui_dragger_tap: #ccc;
   --_dui_draw_bg: #fff;
   --_dui_bg_btn_grid: #00000010;
+  --_dui_dropdown: #fff;
 }
 
 ._dui-header-mobile {
@@ -159,4 +160,9 @@ code {
   background-color: transparent;
   border-bottom: solid 1px #88888820;
   position: relative;
+}
+
+._dui-dropdown {
+  position: relative;
+  background-color: var(--_dui_dropdown);
 }

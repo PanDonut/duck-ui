@@ -104,9 +104,24 @@ export function DraggableMobileGrid({gridbuttons, listbuttons, topHook, setHook}
   )
 }
 
-export function UIContent(props) {
+/**
+ * Wrap elements in this to get rid of overflow issues.
+ * @param {JSX.Elements} children Elements
+ * @example 
+ * <UiContent>
+ *  <div id="myelement"></div>
+ *  <div id="myotherelement"></div>
+ * </UiContent>
+ */
+export function UIContent(children) {
   return (
-    <div className='_dui_main_content'>{props.children}</div>
+    <div className='_dui_main_content'>{children.children}</div>
+  )
+}
+
+export function Dropdown({width, height, text}, props) {
+  return (
+    <div style={{width: width, height: height}} className='_dui-dropdown'>{props.children}</div>
   )
 }
 
@@ -201,7 +216,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <DrawingArea width={100} height={100} />
+        <Dropdown width="200px" height="50px" text="SUS" />
       </header>
       <DraggableMobileGrid gridbuttons={[{"text": "Zgłoś", "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ96lrvoXbEiXlbj9_Czn6FwsFICjdoxiN_KQ&usqp=CAU"},{"text": "Zgłoś", "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ96lrvoXbEiXlbj9_Czn6FwsFICjdoxiN_KQ&usqp=CAU"}]} listbuttons={[{"text": "I'm a button!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}, {"text": "I'm a button too!"}]} topHook={top} setHook={setTop} />
     </div>
